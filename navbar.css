@@ -1,0 +1,30 @@
+.navbar {
+  margin: 0 5%;
+  padding: 5% 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.navbar .logo {
+  font-size: 50px;
+}
+
+.navbar .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  min-width: 238px;
+  max-width: 338px;
+}
+
+.navbar .links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar .links a:hover {
+  color: green;
+}
