@@ -1,9 +1,35 @@
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin: 5% 5% 0;
   overflow: hidden;
   place-items: center;
+  gap: 6px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+.hero-wrapper:nth-child(5) {
+  display: none;
+}
+
+.hero-wrapper:nth-child(6) {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-wrapper:nth-child(5) {
+    display: block;
+  }
+
+  .hero-wrapper:nth-child(6) {
+    display: block;
+  }
 }
 
 .hero-wrapper {

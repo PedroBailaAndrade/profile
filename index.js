@@ -35,7 +35,7 @@ let prevColorIndex = 1;
 let prevRoundnessIndex = 3;
 
 setInterval(() => {
-  const wrappers = [...document.getElementsByClassName("wrapper")];
+  const wrappers = [...document.getElementsByClassName("hero-wrapper")];
 
   wrappers.forEach((wrapper) => {
     getDataSet(wrapper);
