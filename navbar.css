@@ -1,30 +1,150 @@
 .navbar {
-  margin: 0 5%;
-  padding: 5% 0;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  position: fixed;
+  z-index: 9999;
+  left: 5%;
+  top: 5%;
+  width: 90%;
+  transition: all 250ms;
 }
 
-.navbar .logo {
+.navbar.hidden {
+  transform: translateY(-200%);
+}
+
+.navbar .home {
   font-size: 50px;
+  font-family: "Monoton", cursive;
 }
 
 .navbar .links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 45%;
-  min-width: 238px;
-  max-width: 338px;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    min-width: 238px;
+    max-width: 338px;
+  }
+}
+
+.navbar .mobile {
+  width: 3rem;
+  aspect-ratio: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+  transition: all 450ms;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar .mobile {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: bisque;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+  clip-path: polygon(75% 0, 100% 0, 100% 25%, 100% 0);
+  transition: clip-path 500ms;
+}
+
+.navbar-mobile.show {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.navbar-mobile .links {
+  padding: 32% 0 0 22%;
+}
+
+.navbar-mobile a {
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 6%;
+  display: block;
+  position: relative;
 }
 
 .navbar .links a {
-  text-decoration: none;
-  color: inherit;
+  color: white;
+  position: relative;
 }
 
-.navbar .links a:hover {
-  color: green;
+.navbar .links a p {
+  margin: 0;
+}
+
+.navbar .links a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 1px;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  transform: scaleX(0);
+}
+
+.navbar .links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+#eye {
+  width: 100px;
+  transition: all 100ms;
+}
+
+#sclera {
+  aspect-ratio: 1.99;
+  background-color: rgb(178 163 236);
+  width: 100%;
+  -webkit-clip-path: url(#sclera-shape);
+  clip-path: url(#sclera-shape);
+  position: relative;
+}
+
+#iris {
+  aspect-ratio: 1;
+  background-color: rgb(10 10 10);
+  border-radius: 50%;
+  height: 50%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+#pupil {
+  aspect-ratio: 1;
+  background-color: rgb(250, 247, 247);
+  border-radius: 50%;
+  height: 50%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }

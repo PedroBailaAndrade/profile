@@ -2,6 +2,12 @@
 <html>
   <head>
     <title>Pedro Baila Andrade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="images/favicon.png" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="navbar.css" />
@@ -15,18 +21,49 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <script src="index.js"></script>
+  <svg class="svg">
+    <defs>
+      <clipPath id="sclera-shape" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0,0.5 C0,0.5,0.156,0,0.5,0 C0.844,0,1,0.5,1,0.5 C1,0.5,0.844,1,0.5,1 C0.156,1,0,0.5,0,0.5"
+        ></path>
+      </clipPath>
+    </defs>
+  </svg>
   <body>
-    <div id="wrapper">
-      <div class="navbar">
-        <div class="logo">PedroBA</div>
-        <div class="links">
-          <a href="#about"><p>About</p></a>
-          <a href="#experience"><p>Experience</p></a>
-          <a href="#skills"><p>Skills</p></a>
-          <a href="#contacts"><p>Contacts</p></a>
+    <div class="navbar">
+      <a href="#home">
+        <div id="eye">
+          <div id="sclera">
+            <div id="iris">
+              <div id="pupil"></div>
+            </div>
+          </div>
         </div>
+      </a>
+      <div
+        style="background-image: url('icons/menu_open.svg')"
+        class="mobile"
+        onclick="toggleMobileNavbar()"
+      ></div>
+      <div class="links">
+        <a href="#about"><p>About</p></a>
+        <a href="#experience"><p>Experience</p></a>
+        <a href="#skills"><p>Skills</p></a>
+        <a href="#contacts"><p>Contacts</p></a>
       </div>
+    </div>
+    <div class="navbar-mobile">
+      <div class="links">
+        <a onclick="closeMobileNavbar()" href="#about"><p>About</p></a>
+        <a onclick="closeMobileNavbar()" href="#experience"
+          ><p>Experience</p></a
+        >
+        <a onclick="closeMobileNavbar()" href="#skills"><p>Skills</p></a>
+        <a onclick="closeMobileNavbar()" href="#contacts"><p>Contacts</p></a>
+      </div>
+    </div>
+    <div id="wrapper">
       <div class="hero">
         <div
           class="hero-wrapper"
@@ -130,4 +167,6 @@
       </div>
     </div>
   </body>
+  <script src="hero.js"></script>
+  <script src="navbar.js"></script>
 </html>
