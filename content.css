@@ -1,0 +1,9 @@
+.content {
+  margin: 10% 5% 0;
+  height: 10000px;
+}
+
+.content #about {
+  color: white;
+  text-align: center;
+}

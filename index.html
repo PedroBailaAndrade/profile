@@ -2,7 +2,17 @@
 <html>
   <head>
     <title>Pedro Baila Andrade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="hero.css" />
+    <link rel="stylesheet" href="content.css" />
     <meta name="author" content="Pedro Baila Andrade" />
     <meta name="description" content="Pedro Baila Andrade Profile" />
     <meta
@@ -11,7 +21,152 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+  <svg class="svg">
+    <defs>
+      <clipPath id="sclera-shape" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0,0.5 C0,0.5,0.156,0,0.5,0 C0.844,0,1,0.5,1,0.5 C1,0.5,0.844,1,0.5,1 C0.156,1,0,0.5,0,0.5"
+        ></path>
+      </clipPath>
+    </defs>
+  </svg>
   <body>
-    <h1>Hello World!</h1>
+    <div class="navbar">
+      <a href="#home">
+        <div id="eye">
+          <div id="sclera">
+            <div id="iris">
+              <div id="pupil"></div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <div
+        style="background-image: url('icons/menu_open.svg')"
+        class="mobile"
+        onclick="toggleMobileNavbar()"
+      ></div>
+      <div class="links">
+        <a href="#about"><p>About</p></a>
+        <a href="#experience"><p>Experience</p></a>
+        <a href="#skills"><p>Skills</p></a>
+        <a href="#contacts"><p>Contacts</p></a>
+      </div>
+    </div>
+    <div class="navbar-mobile">
+      <div class="links">
+        <a onclick="closeMobileNavbar()" href="#about"><p>About</p></a>
+        <a onclick="closeMobileNavbar()" href="#experience"
+          ><p>Experience</p></a
+        >
+        <a onclick="closeMobileNavbar()" href="#skills"><p>Skills</p></a>
+        <a onclick="closeMobileNavbar()" href="#contacts"><p>Contacts</p></a>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div class="hero">
+        <div
+          class="hero-wrapper"
+          data-configuration="1"
+          data-roundness="1"
+          data-color="1"
+        >
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+
+        <div
+          class="hero-wrapper"
+          data-configuration="5"
+          data-roundness="3"
+          data-color="2"
+        >
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+
+        <div
+          class="hero-wrapper"
+          data-configuration="3"
+          data-roundness="2"
+          data-color="3"
+        >
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+
+        <div
+          class="hero-wrapper"
+          data-configuration="5"
+          data-roundness="1"
+          data-color="1"
+        >
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+
+        <div
+          class="hero-wrapper"
+          data-configuration="5"
+          data-roundness="3"
+          data-color="2"
+        >
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+
+        <div
+          class="hero-wrapper"
+          data-configuration="3"
+          data-roundness="2"
+          data-color="3"
+        >
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+      </div>
+      <div class="content">
+        <div id="about">
+          DaisyWhite cross2ºlayerF U R U’ R’ F’ Yellow crossR U R’ U R U2 R’fish
+          down R U R’ U R U2 R’ Yellow doneL’ U R U’ L U R’ R U R’ U R U2 R’
+          Corners doneF2 U R’ L F2 L’ R U F2 Edges done
+        </div>
+        <div id="experience"></div>
+        <div id="skills"></div>
+        <div id="contacts"></div>
+      </div>
+    </div>
   </body>
+  <script src="hero.js"></script>
+  <script src="navbar.js"></script>
 </html>
