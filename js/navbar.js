@@ -32,7 +32,7 @@ const bodyElement = document.getElementsByTagName("body")[0];
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-  if (lastScrollY < window.scrollY) {
+  if (lastScrollY < window.scrollY && window.scrollY > 10) {
     navbar.classList.add("hidden");
   } else {
     navbar.classList.remove("hidden");
@@ -42,12 +42,12 @@ window.addEventListener("scroll", () => {
 });
 
 const toggleMobileNavbar = () => {
-  mobileAction.style.backgroundImage = "url('../icons/menu_close.svg')";
+  mobileAction.classList.add("close");
   eyeNavbar.style.visibility = "hidden";
   bodyElement.style.overflow = "hidden";
 
   if (mobileNavbar.classList.contains("show")) {
-    mobileAction.style.backgroundImage = "url('../icons/menu_open.svg')";
+    mobileAction.classList.remove("close");
     eyeNavbar.style.visibility = "visible";
     bodyElement.style.overflow = "auto";
   }
@@ -57,7 +57,7 @@ const toggleMobileNavbar = () => {
 
 const closeMobileNavbar = () => {
   if (mobileNavbar.classList.contains("show")) {
-    mobileAction.style.backgroundImage = "url('../icons/menu_open.svg')";
+    mobileAction.classList.remove("close");
     mobileNavbar.classList.remove("show");
     eyeNavbar.style.visibility = "visible";
     bodyElement.style.overflow = "auto";
