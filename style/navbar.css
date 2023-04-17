@@ -5,10 +5,26 @@
   align-items: baseline;
   position: fixed;
   z-index: 9999;
-  left: 5%;
+  left: 2%;
   top: 5%;
-  width: 90%;
+  width: 96%;
   transition: all 250ms;
+}
+
+@media only screen and (min-width: 640px) {
+  .navbar {
+    left: 10%;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .navbar {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 1240px;
+  }
 }
 
 .navbar.hidden {
@@ -37,7 +53,7 @@
 
 .navbar .mobile {
   width: 3rem;
-  aspect-ratio: 1;
+  height: 3rem;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 2;
@@ -102,7 +118,8 @@
   transform: scaleX(0);
 }
 
-.navbar .links a:hover::after {
+.navbar .links a:hover::after,
+.navbar .links a:focus::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }

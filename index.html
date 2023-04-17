@@ -8,11 +8,11 @@
       href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="images/favicon.png" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="hero.css" />
-    <link rel="stylesheet" href="content.css" />
+    <link rel="icon" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="stylesheet" href="../style/navbar.css" />
+    <link rel="stylesheet" href="../style/hero.css" />
+    <link rel="stylesheet" href="../style/content.css" />
     <meta name="author" content="Pedro Baila Andrade" />
     <meta name="description" content="Pedro Baila Andrade Profile" />
     <meta
@@ -42,7 +42,7 @@
         </div>
       </a>
       <div
-        style="background-image: url('icons/menu_open.svg')"
+        style="background-image: url('../icons/menu_open.svg')"
         class="mobile"
         onclick="toggleMobileNavbar()"
       ></div>
@@ -63,7 +63,8 @@
         <a onclick="closeMobileNavbar()" href="#contacts"><p>Contacts</p></a>
       </div>
     </div>
-    <div id="wrapper">
+
+    <div class="wrapper">
       <div class="hero">
         <div
           class="hero-wrapper"
@@ -167,6 +168,6 @@
       </div>
     </div>
   </body>
-  <script src="hero.js"></script>
-  <script src="navbar.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/hero.js"></script>
 </html>

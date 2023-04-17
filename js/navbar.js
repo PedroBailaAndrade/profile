@@ -42,12 +42,12 @@ window.addEventListener("scroll", () => {
 });
 
 const toggleMobileNavbar = () => {
-  mobileAction.style.backgroundImage = "url('icons/menu_close.svg')";
+  mobileAction.style.backgroundImage = "url('../icons/menu_close.svg')";
   eyeNavbar.style.visibility = "hidden";
   bodyElement.style.overflow = "hidden";
 
   if (mobileNavbar.classList.contains("show")) {
-    mobileAction.style.backgroundImage = "url('icons/menu_open.svg')";
+    mobileAction.style.backgroundImage = "url('../icons/menu_open.svg')";
     eyeNavbar.style.visibility = "visible";
     bodyElement.style.overflow = "auto";
   }
@@ -57,7 +57,7 @@ const toggleMobileNavbar = () => {
 
 const closeMobileNavbar = () => {
   if (mobileNavbar.classList.contains("show")) {
-    mobileAction.style.backgroundImage = "url('icons/menu_open.svg')";
+    mobileAction.style.backgroundImage = "url('../icons/menu_open.svg')";
     mobileNavbar.classList.remove("show");
     eyeNavbar.style.visibility = "visible";
     bodyElement.style.overflow = "auto";
