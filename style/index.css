@@ -32,6 +32,22 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+#home {
+  margin-top: 9rem;
+}
+
+@media only screen and (min-width: 768px) {
+  #home {
+    margin-top: 10rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  #home {
+    margin-top: 13rem;
+  }
+}
+
 .wrapper {
   width: 96%;
   margin: 0 auto;

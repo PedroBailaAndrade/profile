@@ -31,35 +31,40 @@
     </defs>
   </svg>
   <body>
-    <div class="navbar">
-      <a href="#home">
-        <div id="eye">
-          <div id="sclera">
-            <div id="iris">
-              <div id="pupil"></div>
+    <div class="navbar-wrapper">
+      <div class="navbar">
+        <a href="#home">
+          <div id="eye">
+            <div id="sclera">
+              <div id="iris">
+                <div id="pupil"></div>
+              </div>
             </div>
           </div>
+        </a>
+        <div class="mobile open" onclick="toggleMobileNavbar()">
+          <img id="mobile-img-open" src="./icons/menu_open.svg" />
+          <img id="mobile-img-close" src="./icons/menu_close.svg" />
         </div>
-      </a>
-      <div class="mobile" onclick="toggleMobileNavbar()"></div>
-      <div class="links">
-        <a href="#about"><p>About</p></a>
-        <a href="#experience"><p>Experience</p></a>
-        <a href="#skills"><p>Skills</p></a>
-        <a href="#contacts"><p>Contacts</p></a>
+        <div class="links">
+          <a href="#about"><p>About</p></a>
+          <a href="#experience"><p>Experience</p></a>
+          <a href="#skills"><p>Skills</p></a>
+          <a href="#contacts"><p>Contacts</p></a>
+        </div>
+      </div>
+      <div class="navbar-mobile">
+        <div class="links">
+          <a onclick="closeMobileNavbar()" href="#about"><p>About</p></a>
+          <a onclick="closeMobileNavbar()" href="#experience"
+            ><p>Experience</p></a
+          >
+          <a onclick="closeMobileNavbar()" href="#skills"><p>Skills</p></a>
+          <a onclick="closeMobileNavbar()" href="#contacts"><p>Contacts</p></a>
+        </div>
       </div>
     </div>
-    <div class="navbar-mobile">
-      <div class="links">
-        <a onclick="closeMobileNavbar()" href="#about"><p>About</p></a>
-        <a onclick="closeMobileNavbar()" href="#experience"
-          ><p>Experience</p></a
-        >
-        <a onclick="closeMobileNavbar()" href="#skills"><p>Skills</p></a>
-        <a onclick="closeMobileNavbar()" href="#contacts"><p>Contacts</p></a>
-      </div>
-    </div>
-
+    <div id="home"></div>
     <div class="wrapper">
       <div class="hero">
         <div
@@ -152,16 +157,16 @@
           <div class="shape"></div>
         </div>
       </div>
-      <div class="content">
-        <div id="about">
-          DaisyWhite cross2ºlayerF U R U’ R’ F’ Yellow crossR U R’ U R U2 R’fish
-          down R U R’ U R U2 R’ Yellow doneL’ U R U’ L U R’ R U R’ U R U2 R’
-          Corners doneF2 U R’ L F2 L’ R U F2 Edges done
-        </div>
-        <div id="experience"></div>
-        <div id="skills"></div>
-        <div id="contacts"></div>
+    </div>
+    <div class="wrapper">
+      <div id="about">
+        DaisyWhite cross2ºlayerF U R U’ R’ F’ Yellow crossR U R’ U R U2 R’fish
+        down R U R’ U R U2 R’ Yellow doneL’ U R U’ L U R’ R U R’ U R U2 R’
+        Corners doneF2 U R’ L F2 L’ R U F2 Edges done
       </div>
+      <div id="experience"></div>
+      <div id="skills"></div>
+      <div id="contacts"></div>
     </div>
   </body>
   <script src="../js/navbar.js"></script>

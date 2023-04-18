@@ -1,7 +1,6 @@
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 9rem auto;
   overflow: hidden;
   place-items: center;
   gap: 6px;
@@ -11,14 +10,12 @@
   .hero {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    margin: 10rem auto;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .hero {
     width: 1240px;
-    margin: 13rem auto;
   }
 }
 
