@@ -26,6 +26,7 @@ body {
   background-color: black;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  padding-bottom: 6rem;
 }
 
 body::-webkit-scrollbar {
