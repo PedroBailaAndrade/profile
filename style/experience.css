@@ -1,0 +1,150 @@
+#experience {
+  margin-top: 6rem;
+}
+
+#experience .timeline {
+  display: grid;
+  margin: auto 0;
+}
+
+#experience .timeline .group {
+  display: grid;
+  grid-template-columns: 0 min-content 1fr;
+}
+
+@media only screen and (min-width: 768px) {
+  #experience .timeline .group {
+    grid-template-columns: 1fr min-content 1fr;
+  }
+}
+
+#experience .timeline .group .component .date.right-text {
+  text-align: right;
+}
+
+#experience .timeline .group .component .date {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #experience .timeline .group .component .date {
+    /* display: block; */
+  }
+}
+
+#experience .timeline .group .component {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 250ms, transform 250ms;
+}
+
+#experience .timeline .group.fade-in .component {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#experience .timeline .group.fade-in .component.card {
+  opacity: 1;
+  transform: translateY(-35%);
+}
+
+#experience .timeline .group > .line {
+  width: 3px;
+  height: 100%;
+}
+
+#experience .timeline .group > .line:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+#experience .timeline .group .line::after {
+  background: #eee;
+  top: 0;
+  left: 0;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 450ms ease-out;
+}
+
+#experience .timeline .group.fade-in .line::after {
+  clip-path: inset(0 0 0 0);
+}
+
+#experience .timeline .group.mockup {
+  height: 7rem;
+}
+
+#experience .timeline .group:last-of-type .component.card {
+  margin: 0;
+}
+
+#experience .timeline .component.card {
+  padding: 1.5rem;
+  background-color: #eee;
+  color: black;
+  border: 0.25rem solid #05060f;
+  box-shadow: 0.4rem 0.4rem #05060f;
+  border-radius: 25px;
+  margin: 0 0 3rem;
+}
+
+#experience .timeline .component .company {
+  font-size: 1.3rem;
+}
+
+#experience .timeline .component .job {
+  font-size: 1.2rem;
+}
+
+#experience .timeline .component .description {
+  font-size: 1rem;
+}
+
+#experience .timeline .component .stack {
+  font-size: 0.9rem;
+}
+
+#experience .timeline .line {
+  position: relative;
+  background: transparent;
+  margin: 0 1.5rem 0 calc((1rem - 3px) / 2);
+}
+
+@media only screen and (min-width: 768px) {
+  #experience .timeline .line {
+    margin: 0 1.5rem;
+  }
+}
+
+#experience .timeline .line .point {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 1rem;
+  aspect-ratio: 1;
+  background: wheat;
+  border: 0.4rem solid #05060f;
+  box-shadow: 0.1rem #eee;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .timeline .group:nth-child(odd) .component {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .timeline .group:nth-child(odd) .line {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .timeline .group:nth-child(odd) .component.card {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
