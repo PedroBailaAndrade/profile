@@ -92,7 +92,7 @@ const closeMobileNavbar = () => {
   }
 };
 
-const observer = new IntersectionObserver(
+const navBarObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
@@ -106,4 +106,4 @@ const observer = new IntersectionObserver(
 );
 
 moveEye();
-observer.observe(home);
+navBarObserver.observe(home);

@@ -23,7 +23,8 @@ a:active {
 }
 
 body {
-  background-color: black;
+  background-color: #212121;
+  color: #eee;
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding-bottom: 6rem;

@@ -1,5 +1,4 @@
 #about {
-  color: white;
   text-align: left;
   margin-top: 6rem;
 }
@@ -7,16 +6,42 @@
 #about h1 {
   margin-bottom: 2.5rem;
   font-size: 3.5rem;
+  font-family: "Press Start 2P", cursive;
+}
+
+#about span.profession {
+  font-size: 1.3rem;
+  font-family: "Press Start 2P", cursive;
+}
+
+#about .profession {
+  background: linear-gradient(180deg, transparent 60%, blue 60%);
 }
 
 #about p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
   font-size: 1.5rem;
+}
+
+#about p.main {
+  font-size: 1.5rem;
+}
+
+#about p.secondary {
+  font-size: 1.3rem;
 }
 
 @media only screen and (min-width: 768px) {
   #about p {
+    font-size: 1.8rem;
+  }
+
+  #about p.main {
     font-size: 2rem;
+  }
+
+  #about p.secondary {
+    font-size: 1.7rem;
   }
 }
 
@@ -53,8 +78,4 @@
   100% {
     transform: rotate(0deg);
   }
-}
-
-#about .profession {
-  background: linear-gradient(180deg, transparent 60%, blue 60%);
 }
