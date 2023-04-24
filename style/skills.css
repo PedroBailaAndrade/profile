@@ -1,0 +1,75 @@
+#skills {
+  margin-top: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  cursor: none;
+}
+
+#skills .card {
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background-color: rgba(33, 33, 33, 1);
+}
+
+#skills .card::before,
+#skills .card > .card-border {
+  content: "";
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+#skills .card::before {
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+#skills .card > .card-border {
+  background: radial-gradient(
+    200px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.3),
+    transparent 40%
+  );
+  z-index: 1;
+}
+
+#skills .card:hover::before {
+  opacity: 1;
+}
+
+#skills .card > .card-content {
+  background-color: #05060f;
+  border-radius: inherit;
+  margin: 2px;
+  height: calc(100% - 4px);
+  width: calc(100% - 4px);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#skills:hover > .card > .card-border {
+  opacity: 1;
+}
+
+.card .card-content .icon {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+}
