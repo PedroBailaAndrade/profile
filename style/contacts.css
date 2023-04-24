@@ -1,0 +1,44 @@
+#contacts {
+  margin-top: 6rem;
+}
+
+#contacts .card {
+  padding: 1.5rem;
+  background-color: #eee;
+  color: black;
+  border: 0.25rem solid #05060f;
+  box-shadow: 0.4rem 0.4rem #05060f;
+  border-radius: 25px;
+  opacity: 0;
+  transform: translateY(30%);
+  transition: opacity 250ms, transform 250ms;
+}
+
+#contacts .card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card .name {
+  font-size: 1.5rem;
+}
+
+.card .info,
+.card .static-contacts,
+.card .interactive-contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .static-contacts {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.card .interactive-contacts {
+  font-size: 2rem;
+}
+
+.interactive-contacts a i {
+  color: #05060f;
+}
