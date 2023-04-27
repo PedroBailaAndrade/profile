@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 50px;
+  cursor: url("../images/normal_cursor.png"), auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -20,6 +21,7 @@ a:focus,
 a:active {
   text-decoration: none;
   outline: none;
+  cursor: url("../images/click_cursor.png"), pointer;
 }
 
 body {
