@@ -28,6 +28,12 @@
 
 @media only screen and (min-width: 1280px) {
   .navbar {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .navbar {
     width: 1240px;
   }
 }
