@@ -61,11 +61,20 @@
 @media only screen and (min-width: 768px) {
   .navbar .links {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     align-items: center;
-    width: 45%;
-    min-width: 238px;
-    max-width: 338px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .navbar .links {
+    gap: 40px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .navbar .links {
+    gap: 50px;
   }
 }
 
@@ -123,43 +132,90 @@
 }
 
 .navbar-mobile .links {
-  padding: 32% 0 0 22%;
+  padding-top: 33%;
+  width: 86%;
+  margin: auto;
 }
 
 .navbar-mobile a {
-  color: black;
-  font-size: 2rem;
-  margin-bottom: 6%;
+  font-size: 1.2rem;
+  margin-bottom: 12%;
   display: block;
-  position: relative;
-}
-
-.navbar .links a {
-  color: inherit;
-  position: relative;
+  padding: 1.2rem;
 }
 
 .navbar .links a p {
   margin: 0;
 }
 
-.navbar .links a:after {
+.navbar .links a {
+  font-size: 0.8rem;
+  padding: 0.5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .navbar .links a {
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+.navbar .links a,
+.navbar-mobile .links a {
+  text-align: center;
+  color: #e9944a;
+  font-family: "Press Start 2P", cursive;
+  position: relative;
+}
+
+.navbar .links a:hover {
+  animation: shake 250ms linear;
+}
+
+.navbar .links a::before,
+.navbar-mobile .links a::before,
+.navbar .links a::after,
+.navbar-mobile .links a::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1px;
-  bottom: 1px;
-  left: 0;
-  background-color: #eee;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-  transform: scaleX(0);
+  height: 100%;
+  box-sizing: content-box;
 }
 
-.navbar .links a:hover::after,
-.navbar .links a:focus::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.navbar .links a::before,
+.navbar-mobile .links a::before {
+  top: -6px;
+  left: 0;
+  border-top: 6px #e9944a solid;
+  border-bottom: 6px #e9944a solid;
+}
+
+.navbar .links a::after,
+.navbar-mobile .links a::after {
+  left: -6px;
+  top: 0;
+  border-left: 6px #e9944a solid;
+  border-right: 6px #e9944a solid;
+}
+
+.navbar .links a:nth-child(1),
+.navbar-mobile .links a:nth-child(1) {
+  background-color: #e14842;
+}
+
+.navbar .links a:nth-child(2),
+.navbar-mobile .links a:nth-child(2) {
+  background-color: #3b8457;
+}
+
+.navbar .links a:nth-child(3),
+.navbar-mobile .links a:nth-child(3) {
+  background-color: #d8d6cb;
+}
+
+.navbar .links a:nth-child(4),
+.navbar-mobile .links a:nth-child(4) {
+  background-color: #fdef6d;
 }
 
 .svg {
@@ -209,4 +265,22 @@
   top: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  95% {
+    transform: rotate(2.5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
