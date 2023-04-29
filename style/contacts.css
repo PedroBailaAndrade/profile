@@ -2,6 +2,12 @@
   margin-top: 6rem;
 }
 
+@media only screen and (min-width: 1024px) {
+  #contacts {
+    margin-top: 10rem;
+  }
+}
+
 #contacts .card {
   padding: 1.5rem;
   background-color: #eee;
