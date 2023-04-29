@@ -12,25 +12,6 @@
   grid-template-columns: 0 min-content 1fr;
 }
 
-@media only screen and (min-width: 900px) {
-  #experience .timeline .group {
-    grid-template-columns: 1fr min-content 1fr;
-  }
-
-  #experience .timeline .group .component {
-    width: 70%;
-    max-width: 450px;
-  }
-
-  #experience .timeline .group .component.right {
-    margin: auto 0 auto auto;
-  }
-
-  #experience .timeline .component.card {
-    padding: 1.9rem 2.5rem 1.9rem 1.9rem;
-  }
-}
-
 #experience .timeline .group .component {
   opacity: 0;
   transform: translateY(50%);
@@ -171,5 +152,24 @@
   .timeline .group:nth-child(odd) .component.card {
     grid-column: 3;
     grid-row: 1;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #experience .timeline .group {
+    grid-template-columns: 1fr min-content 1fr;
+  }
+
+  #experience .timeline .group .component {
+    width: 70%;
+    max-width: 450px;
+  }
+
+  #experience .timeline .group .component.right {
+    margin: auto 0 auto auto;
+  }
+
+  #experience .timeline .component.card {
+    padding: 1.9rem 2.5rem 1.9rem 1.9rem;
   }
 }
