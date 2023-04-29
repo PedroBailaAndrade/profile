@@ -2,6 +2,12 @@
   margin-top: 6rem;
 }
 
+@media only screen and (min-width: 1024px) {
+  #experience {
+    margin-top: 10rem;
+  }
+}
+
 #experience .timeline {
   display: grid;
   margin: auto;
@@ -75,19 +81,24 @@
   cursor: url("../images/click_cursor.png"), pointer;
 }
 
+#experience .timeline .component .company img.logo {
+  height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
 #experience .timeline .component .company img {
   height: 1.9rem;
   margin-bottom: 1rem;
 }
 
 #experience .timeline .component .job {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 0.1rem;
 }
 
 #experience .timeline .component .job span {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -97,7 +108,7 @@
 }
 
 #experience .timeline .component .description {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 1.5rem;
 }
 
