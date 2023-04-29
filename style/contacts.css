@@ -12,6 +12,9 @@
   opacity: 0;
   transform: translateY(30%);
   transition: opacity 250ms, transform 250ms;
+  max-width: 550px;
+  margin: auto;
+  text-align: center;
 }
 
 #contacts .card.fade-in {
@@ -20,14 +23,14 @@
 }
 
 .card .name {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
+  margin-bottom: 1.4rem;
 }
 
 .card .info,
-.card .static-contacts,
 .card .interactive-contacts {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .card .static-contacts {
@@ -39,6 +42,17 @@
   font-size: 2rem;
 }
 
-.interactive-contacts a i {
-  color: #05060f;
+.card .static-contacts p:first-of-type {
+  margin-bottom: 0.2rem;
+}
+
+.interactive-contacts a img {
+  height: 2rem;
+}
+
+@media only screen and (min-width: 500px) {
+  .card .static-contacts {
+    display: flex;
+    justify-content: space-around;
+  }
 }
