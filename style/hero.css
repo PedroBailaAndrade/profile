@@ -11,20 +11,16 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
   }
+
+  .hero-wrapper:nth-child(4) {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1536px) {
   .hero {
     width: 1200px;
   }
-}
-
-.hero-wrapper:nth-child(5) {
-  display: none;
-}
-
-.hero-wrapper:nth-child(6) {
-  display: none;
 }
 
 @media only screen and (min-width: 768px) {
