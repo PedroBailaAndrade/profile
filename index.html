@@ -1,17 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Pedro Baila Andrade</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="icon" href="../images/favicon.png" />
     <link rel="stylesheet" href="../style/index.css" />
     <link rel="stylesheet" href="../style/navbar.css" />
@@ -27,6 +19,7 @@
       content="Pedro Baila Andrade, Profile, Frontend, Front-end, Front end, Developer, Programmer"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
   </head>
   <svg class="svg">
     <defs>
@@ -40,7 +33,7 @@
   <body>
     <div class="navbar-wrapper">
       <div class="navbar">
-        <a href="#home">
+        <a aria-label="home section" href="#home">
           <div id="eye">
             <div id="sclera">
               <div id="iris">
@@ -50,24 +43,56 @@
           </div>
         </a>
         <div class="mobile open" onclick="toggleMobileNavbar()">
-          <img id="mobile-img-open" src="./icons/menu_open.svg" />
-          <img id="mobile-img-close" src="./icons/menu_close.svg" />
+          <img
+            width="auto"
+            height="auto"
+            alt="mobile open menu"
+            id="mobile-img-open"
+            src="./icons/menu_open.svg"
+          />
+          <img
+            width="auto"
+            height="auto"
+            alt="mobile close menu"
+            id="mobile-img-close"
+            src="./icons/menu_close.svg"
+          />
         </div>
         <div class="links">
-          <a href="#about"><p>About</p></a>
-          <a href="#experience"><p>Experience</p></a>
-          <a href="#skills"><p>Skills</p></a>
-          <a href="#contacts"><p>Contacts</p></a>
+          <a aria-label="about section" href="#about"><p>About</p></a>
+          <a aria-label="experience section" href="#experience"
+            ><p>Experience</p></a
+          >
+          <a aria-label="skills section" href="#skills"><p>Skills</p></a>
+          <a aria-label="contacts section" href="#contacts"><p>Contacts</p></a>
         </div>
       </div>
       <div class="navbar-mobile">
         <div class="links">
-          <a onclick="closeMobileNavbar()" href="#about"><p>About</p></a>
-          <a onclick="closeMobileNavbar()" href="#experience"
+          <a
+            aria-label="about section"
+            onclick="closeMobileNavbar()"
+            href="#about"
+            ><p>About</p></a
+          >
+          <a
+            aria-label="experience section"
+            onclick="closeMobileNavbar()"
+            href="#experience"
             ><p>Experience</p></a
           >
-          <a onclick="closeMobileNavbar()" href="#skills"><p>Skills</p></a>
-          <a onclick="closeMobileNavbar()" href="#contacts"><p>Contacts</p></a>
+          <a
+            aria-label="skills section"
+            onclick="closeMobileNavbar()"
+            href="#skills"
+            ><p>Skills</p></a
+          >
+          <a
+            aria-label="contacts section"
+            onclick="closeMobileNavbar()"
+            href="#contacts"
+            ><p>Contacts</p></a
+          >
         </div>
       </div>
     </div>
@@ -167,7 +192,12 @@
     </div>
     <div class="wrapper">
       <div id="about">
-        <img src="./images/about-header.svg" />
+        <img
+          width="auto"
+          height="auto"
+          alt="Hi! I'm Pedro!"
+          src="./images/about-header.svg"
+        />
         <p class="main">
           <span class="profession">.Frontend Developer.</span> with a passion
           for creating amazing user interactions and experiences.
@@ -207,8 +237,13 @@
             </div>
             <div class="component card">
               <div class="company">
-                <a href="https://uphold.com" target="_blank"
-                  ><img class="logo" src="./icons/uphold.svg"
+                <a aria-label="uphold" href="https://uphold.com" target="_blank"
+                  ><img
+                    width="auto"
+                    height="auto"
+                    alt="uphold logo"
+                    class="logo"
+                    src="./icons/uphold.svg"
                 /></a>
               </div>
               <p class="job">Junior Frontend Developer</p>
@@ -219,21 +254,65 @@
                 Directly with PM, DM, and Designers.
               </p>
               <div class="stack">
-                <img src="./icons/react.svg" />
-                <img src="./icons/styled-comp.svg" />
-                <img src="./icons/next.svg" />
-                <img src="./icons/graphql.svg" />
-                <img src="./icons/javascript.svg" />
-                <img src="./icons/node.svg" />
-                <img src="./icons/git.svg" />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="react logo"
+                  src="./icons/react.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="styled components logo"
+                  src="./icons/styled-comp.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="next.js logo"
+                  src="./icons/next.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="graphql logo"
+                  src="./icons/graphql.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="javascript logo"
+                  src="./icons/javascript.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="node.js logo"
+                  src="./icons/node.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="git logo"
+                  src="./icons/git.svg"
+                />
               </div>
             </div>
           </div>
           <div class="group">
             <div class="component card right">
               <div class="company">
-                <a href="https://subvisual.com/" target="_blank">
-                  <img src="./icons/subvisual.svg" />
+                <a
+                  aria-label="subvisual"
+                  href="https://subvisual.com/"
+                  target="_blank"
+                >
+                  <img
+                    width="auto"
+                    height="auto"
+                    alt="subvisual logo"
+                    src="./icons/subvisual.svg"
+                  />
                 </a>
               </div>
               <p class="job">Frontend Developer <span>(internship)</span></p>
@@ -244,13 +323,48 @@
                 and learned general best practices.
               </p>
               <div class="stack">
-                <img src="./icons/svelte.svg" />
-                <img src="./icons/javascript.svg" />
-                <img src="./icons/html.svg" />
-                <img src="./icons/css.svg" />
-                <img src="./icons/scss.svg" />
-                <img src="./icons/node.svg" />
-                <img src="./icons/git.svg" />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="svelte logo"
+                  src="./icons/svelte.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="javascript logo"
+                  src="./icons/javascript.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="html logo"
+                  src="./icons/html.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="css logo"
+                  src="./icons/css.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="scss logo"
+                  src="./icons/scss.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="node.js logo"
+                  src="./icons/node.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="git logo"
+                  src="./icons/git.svg"
+                />
               </div>
             </div>
             <div class="line">
@@ -269,8 +383,17 @@
             </div>
             <div class="component card">
               <div class="company">
-                <a href="https://notify-group.com/" target="_blank">
-                  <img src="./icons/notify.svg" />
+                <a
+                  aria-label="notify"
+                  href="https://notify-group.com/"
+                  target="_blank"
+                >
+                  <img
+                    width="auto"
+                    height="auto"
+                    alt="notify logo"
+                    src="./icons/notify.svg"
+                  />
                 </a>
               </div>
               <p class="job">
@@ -283,20 +406,60 @@
                 through mini-games.
               </p>
               <div class="stack">
-                <img src="./icons/php.svg" />
-                <img src="./icons/html.svg" />
-                <img src="./icons/css.svg" />
-                <img src="./icons/javascript.svg" />
-                <img src="./icons/jquery.svg" />
-                <img src="./icons/sql.svg" />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="php logo"
+                  src="./icons/php.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="html logo"
+                  src="./icons/html.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="css logo"
+                  src="./icons/css.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="javascript logo"
+                  src="./icons/javascript.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="jquery logo"
+                  src="./icons/jquery.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="sql logo"
+                  src="./icons/sql.svg"
+                />
               </div>
             </div>
           </div>
           <div class="group">
             <div class="component card right">
               <div class="company">
-                <a href="https://www.lewagon.com/" target="_blank">
-                  <img class="logo" src="./icons/le-wagon.svg" />
+                <a
+                  aria-label="le wagon"
+                  href="https://www.lewagon.com/"
+                  target="_blank"
+                >
+                  <img
+                    width="auto"
+                    height="auto"
+                    alt="le wagon logo"
+                    class="logo"
+                    src="./icons/le-wagon.svg"
+                  />
                 </a>
               </div>
               <p class="job">Full-Stack Bootcamp</p>
@@ -306,13 +469,48 @@
                 Fully functional web app as final project.
               </p>
               <div class="stack">
-                <img src="./icons/rails.svg" />
-                <img src="./icons/javascript.svg" />
-                <img src="./icons/html.svg" />
-                <img src="./icons/css.svg" />
-                <img src="./icons/bootstrap.svg" />
-                <img src="./icons/heroku.svg" />
-                <img src="./icons/git.svg" />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="rails logo"
+                  src="./icons/rails.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="javascript logo"
+                  src="./icons/javascript.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="html logo"
+                  src="./icons/html.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="css logo"
+                  src="./icons/css.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="bootstrap logo"
+                  src="./icons/bootstrap.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="heroku logo"
+                  src="./icons/heroku.svg"
+                />
+                <img
+                  width="auto"
+                  height="auto"
+                  alt="git logo"
+                  src="./icons/git.svg"
+                />
               </div>
             </div>
             <div class="line">
@@ -329,7 +527,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/react.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="react logo"
+                src="./icons/react.svg"
+              />
             </div>
           </div>
         </div>
@@ -337,7 +540,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/svelte.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="svelte logo"
+                src="./icons/svelte.svg"
+              />
             </div>
           </div>
         </div>
@@ -345,7 +553,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/javascript.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="javascript logo"
+                src="./icons/javascript.svg"
+              />
             </div>
           </div>
         </div>
@@ -353,7 +566,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/html.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="html logo"
+                src="./icons/html.svg"
+              />
             </div>
           </div>
         </div>
@@ -361,7 +579,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/css.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="css logo"
+                src="./icons/css.svg"
+              />
             </div>
           </div>
         </div>
@@ -369,7 +592,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/scss.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="scss logo"
+                src="./icons/scss.svg"
+              />
             </div>
           </div>
         </div>
@@ -377,7 +605,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/styled-comp.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="styled components logo"
+                src="./icons/styled-comp.svg"
+              />
             </div>
           </div>
         </div>
@@ -385,7 +618,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/bootstrap.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="bootstrap logo"
+                src="./icons/bootstrap.svg"
+              />
             </div>
           </div>
         </div>
@@ -393,7 +631,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/next-white.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="next.js logo"
+                src="./icons/next-white.svg"
+              />
             </div>
           </div>
         </div>
@@ -401,7 +644,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/node.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="node.js logo"
+                src="./icons/node.svg"
+              />
             </div>
           </div>
         </div>
@@ -409,7 +657,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/rails.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="rails logo"
+                src="./icons/rails.svg"
+              />
             </div>
           </div>
         </div>
@@ -417,7 +670,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/jquery.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="jquery logo"
+                src="./icons/jquery.svg"
+              />
             </div>
           </div>
         </div>
@@ -425,7 +683,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/php.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="php logo"
+                src="./icons/php.svg"
+              />
             </div>
           </div>
         </div>
@@ -433,7 +696,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/git.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="git logo"
+                src="./icons/git.svg"
+              />
             </div>
           </div>
         </div>
@@ -441,7 +709,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/github-white.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="github logo"
+                src="./icons/github-white.svg"
+              />
             </div>
           </div>
         </div>
@@ -449,7 +722,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/graphql.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="graphql logo"
+                src="./icons/graphql.svg"
+              />
             </div>
           </div>
         </div>
@@ -457,7 +735,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/sql-white.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="sql logo"
+                src="./icons/sql-white.svg"
+              />
             </div>
           </div>
         </div>
@@ -465,7 +748,12 @@
           <div class="card-border"></div>
           <div class="card-content">
             <div class="icon">
-              <img src="./icons/heroku.svg" />
+              <img
+                width="auto"
+                height="auto"
+                alt="heroku logo"
+                src="./icons/heroku.svg"
+              />
             </div>
           </div>
         </div>
@@ -478,20 +766,49 @@
             <p>+351 915 180 652</p>
           </div>
           <div class="interactive-contacts">
-            <a href="mailto:pedrocbva@gmail.com"
-              ><img src="./icons/email.svg"
+            <a aria-label="email" href="mailto:pedrocbva@gmail.com"
+              ><img
+                width="auto"
+                height="auto"
+                alt="send email"
+                src="./icons/email.svg"
             /></a>
-            <a href="sms:+351915180652"><img src="./icons/sms.svg" /></a>
-            <a href="https://wa.me/351915180652" target="_blank"
-              ><img src="./icons/whatsapp.svg"
+            <a aria-label="sms" href="sms:+351915180652"
+              ><img
+                width="auto"
+                height="auto"
+                alt="send sms"
+                src="./icons/sms.svg"
             /></a>
             <a
+              aria-label="whatsapp"
+              href="https://wa.me/351915180652"
+              target="_blank"
+              ><img
+                width="auto"
+                height="auto"
+                alt="send whatsapp"
+                src="./icons/whatsapp.svg"
+            /></a>
+            <a
+              aria-label="linkedin"
               href="https://www.linkedin.com/in/pedro-baila-andrade/"
               target="_blank"
-              ><img src="./icons/linkedin.svg"
+              ><img
+                width="auto"
+                height="auto"
+                alt="linkedin logo"
+                src="./icons/linkedin.svg"
             /></a>
-            <a href="https://github.com/PedroBailaAndrade" target="_blank"
-              ><img src="./icons/github.svg"
+            <a
+              aria-label="github"
+              href="https://github.com/PedroBailaAndrade"
+              target="_blank"
+              ><img
+                width="auto"
+                height="auto"
+                alt="github logo"
+                src="./icons/github.svg"
             /></a>
           </div>
         </div>
