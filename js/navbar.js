@@ -62,16 +62,14 @@ window.addEventListener("scroll", () => {
 
 const toggleMobileNavbar = () => {
   if (mobileAction.classList.contains("open")) {
-    mobileAction.classList.remove("open");
-    mobileAction.classList.add("close");
+    mobileAction.classList.replace("open", "close");
   }
   eyeNavbar.style.visibility = "hidden";
   bodyElement.style.overflow = "hidden";
 
   if (mobileNavbar.classList.contains("show")) {
     if (mobileAction.classList.contains("close")) {
-      mobileAction.classList.remove("close");
-      mobileAction.classList.add("open");
+      mobileAction.classList.replace("close", "open");
     }
     eyeNavbar.style.visibility = "visible";
     bodyElement.style.overflow = "auto";
@@ -83,8 +81,7 @@ const toggleMobileNavbar = () => {
 const closeMobileNavbar = () => {
   if (mobileNavbar.classList.contains("show")) {
     if (mobileAction.classList.contains("close")) {
-      mobileAction.classList.remove("close");
-      mobileAction.classList.add("open");
+      mobileAction.classList.replace("close", "open");
     }
     mobileNavbar.classList.remove("show");
     eyeNavbar.style.visibility = "visible";
@@ -106,4 +103,15 @@ const navBarObserver = new IntersectionObserver(
 );
 
 moveEye();
+
 navBarObserver.observe(home);
+
+document
+  .getElementById("navbar-mobile-toggle")
+  .addEventListener("click", toggleMobileNavbar);
+
+const links = document.getElementsByClassName("mobile-navbar-links");
+
+for (const link of links) {
+  link.addEventListener("click", closeMobileNavbar);
+}
