@@ -114,6 +114,7 @@
 
 #experience .timeline .component .stack {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.9rem;
   align-items: center;
   justify-content: left;
@@ -150,17 +151,17 @@
 }
 
 @media only screen and (max-width: 899px) {
-  .timeline .group:nth-child(odd) .component {
+  .timeline .group:nth-child(even) .component {
     grid-column: 1;
     grid-row: 1;
   }
 
-  .timeline .group:nth-child(odd) .line {
+  .timeline .group:nth-child(even) .line {
     grid-column: 2;
     grid-row: 1;
   }
 
-  .timeline .group:nth-child(odd) .component.card {
+  .timeline .group:nth-child(even) .component.card {
     grid-column: 3;
     grid-row: 1;
   }
